@@ -1,0 +1,25 @@
+pragma language_version >= 0.16;
+
+import CompactStandardLibrary;
+
+export ledger contractId: Bytes<32>;
+export ledger partyA: Bytes<32>;
+export ledger partyB: Bytes<32>;
+export ledger agreementTimestamp: Uint<64>;
+export ledger agreementCount: Counter;
+
+witness clientName(): Bytes<32>;
+witness paymentAmount(): Uint<64>;
+witness projectScope(): Bytes<64>;
+
+export circuit createAgreement(
+  a: Bytes<32>,
+  b: Bytes<32>,
+  timestamp: Uint<64>
+): [] {
+  partyA = disclose(a);
+  partyB = disclose(b);
+  agreementTimestamp = disclose(timestamp);
+  agreementCount.increment(1);
+}
+

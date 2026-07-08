@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "file": "index.js",
+  "sourceRoot": "../../",
+  "sources": ["agreement.compact"],
+  "names": [],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAAA;;;;;;;;;;MAcA,AAAA,eASC;;;;;cARC,GAAY;cACZ,GAAY;cACZ,WAAmB;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;yCAFnB,GAAY,+BACZ,GAAY,+BACZ,WAAmB;;;;;;;;;iDAFnB,GAAY;iDACZ,GAAY;iDACZ,WAAmB;;;OAMpB;;;;GAEA;EAzBD;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAIA;;;;;;;;;yEAAoC;IACpC;;;;;;;;;yEAAgC;IAChC;;;;;;;;;yEAAgC;IAChC;;;;;;;;;yEAA2C;IAC3C;;;;;;;;;yEAAsC;;;;;;;GAiBrC;EAXD,AAAA,kBASC,4BARC,GAAY,EACZ,GAAY,EACZ,WAAmB;IAEnB;;;;;;;2HAAkB,GAAC;;yEAAb;IACN;;;;;;;2HAAkB,GAAC;;yEAAb;IACN;;;;;;;2HAA8B,WAAS;;yEAArB;UAClB,KAAc;IAAd;;;;;;;;;;6FAAA,KAAc;;;;wEAAA;;GACf;;;;;;;;;;;;;;;;IAnBD;qCAAA;;;;;;;;;;;0GAAoC;KAAA;IACpC;qCAAA;;;;;;;;;;;0GAAgC;KAAA;IAChC;qCAAA;;;;;;;;;;;0GAAgC;KAAA;IAChC;qCAAA;;;;;;;;;;;0GAA2C;KAAA;IAC3C;qCAAA;;;;;;;;;;;0GAAsC;KAAA;;;;;;;;;;"
+}
