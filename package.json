@@ -1,0 +1,30 @@
+{
+  "name": "midnight-b2b-dashboard",
+  "version": "1.0.0",
+  "description": "This project aims to build a decentralized B2B dashboard for freelancers and agencies to manage client agreements securely. While the existence of a contract and its timestamp will be public on the ledger, sensitive details like client names, payment amounts, and project scopes will remain completely hidden using Midnight's privacy-first architecture.",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buselifkirmizi/midnight-b2b-dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buselifkirmizi/midnight-b2b-dashboard/issues"
+  },
+  "homepage": "https://github.com/buselifkirmizi/midnight-b2b-dashboard#readme",
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10"
+  },
+  "dependencies": {
+    "@midnight-ntwrk/compact-runtime": "^0.16.0",
+    "@midnight-ntwrk/midnight-js-network-id": "^4.1.1"
+  },
+  "type": "module"
+}
