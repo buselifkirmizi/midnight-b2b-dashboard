@@ -4,7 +4,9 @@
   "description": "This project aims to build a decentralized B2B dashboard for freelancers and agencies to manage client agreements securely. While the existence of a contract and its timestamp will be public on the ledger, sensitive details like client names, payment amounts, and project scopes will remain completely hidden using Midnight's privacy-first architecture.",
   "main": "index.js",
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run",
+    "deploy": "tsx src/deploy.ts",
+    "deploy-agreement": "node --experimental-specifier-resolution=node --loader ts-node/esm src/deploy.ts"
   },
   "repository": {
     "type": "git",
@@ -19,12 +21,30 @@
   "homepage": "https://github.com/buselifkirmizi/midnight-b2b-dashboard#readme",
   "devDependencies": {
     "@types/node": "^26.1.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.1",
     "typescript": "^6.0.3",
     "vitest": "^4.1.10"
   },
   "dependencies": {
     "@midnight-ntwrk/compact-runtime": "^0.16.0",
-    "@midnight-ntwrk/midnight-js-network-id": "^4.1.1"
+    "@midnight-ntwrk/ledger": "^4.0.0",
+    "@midnight-ntwrk/midnight-js-contracts": "^4.1.1",
+    "@midnight-ntwrk/midnight-js-http-client-proof-provider": "^4.1.1",
+    "@midnight-ntwrk/midnight-js-indexer-public-data-provider": "^4.1.1",
+    "@midnight-ntwrk/midnight-js-level-private-state-provider": "^4.1.1",
+    "@midnight-ntwrk/midnight-js-network-id": "^4.1.1",
+    "@midnight-ntwrk/midnight-js-node-zk-config-provider": "^4.1.1",
+    "@midnight-ntwrk/midnight-js-protocol": "^4.1.1",
+    "@midnight-ntwrk/midnight-js-utils": "^4.1.1",
+    "@midnight-ntwrk/testkit-js": "^4.1.1",
+    "@midnight-ntwrk/wallet": "^5.0.0",
+    "@midnight-ntwrk/wallet-api": "^5.0.0",
+    "@midnight-ntwrk/wallet-sdk-address-format": "^3.1.2",
+    "@midnight-ntwrk/wallet-sdk-facade": "^4.0.1",
+    "@midnight-ntwrk/zswap": "^4.0.0",
+    "pino": "^10.3.1",
+    "rxjs": "^7.8.2"
   },
   "type": "module"
 }

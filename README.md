@@ -95,15 +95,27 @@ Expected output: two tests pass, verifying that:
 
 ## Deployment
 
-Deployment to the Midnight Preprod network requires:
+The contract has been successfully deployed to the Midnight **Preview** network.
+
+- **Network:** Preview
+- **Contract address:** `2756ccf6c0aa587f81b27ec8e077955e8a8034317657f4f951c00feb6eade355`
+- **Transaction hash:** `537aaccf021e0e05aa49dd290efd73d73509d2fb09d98c2bfab352e0cc8ec543`
+- **Deployed at:** 2026-07-20T09:08:58.525Z
+
+Full deployment metadata is available in [`deployment.json`](./deployment.json).
+
+### Deployment requirements
+
 - A running proof server (Docker):
 ```bash
-  docker run -p 6300:6300 midnightnetwork/proof-server midnight-proof-server
+docker run -p 6300:6300 midnightnetwork/proof-server midnight-proof-server
 ```
-- A Lace wallet configured for Midnight Preprod, funded via the [Midnight test faucet](https://faucet.preprod.midnight.network).
-- A deployment script wiring up the Midnight indexer, node, and proof server providers.
+- A funded Midnight wallet (Preview or Preprod), obtained via the [Nethermind faucet](https://midnight-tmnight-preview.nethermind.dev/) or the [official Midnight faucet](https://faucet.preview.midnight.network).
+- A deployment script wiring up the Midnight indexer, node, and proof server providers (see `src/`).
 
-Deployment work is ongoing; see the repository commit history for the current progress.
+### Public state vs. private witness
+
+The contract's ledger fields (`contractId`, `partyA`, `partyB`, `agreementTimestamp`, `agreementCount`) are all public: every write to them is visible on-chain to anyone querying the indexer. In Compact, circuit inputs are private by default; `disclose()` does not itself make a value public, it tells the compiler the developer considers that specific value safe to expose. Data only becomes genuinely public once it crosses into a public domain, such as a ledger write, a return value from an exported circuit, or a contract-to-contract call. In this contract, `createAgreement` explicitly discloses its three parameters (`a`, `b`, `timestamp`) before writing them into the public ledger state; the witness functions (`clientName`, `paymentAmount`, `projectScope`) remain declared as private inputs and are never disclosed, keeping that data off-chain.
 
 ## License
 
